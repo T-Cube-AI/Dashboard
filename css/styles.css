@@ -1,0 +1,224 @@
+html, body{ height:100%; margin:0; }
+footer{ height:50px; margin-bottom: 50px;}
+
+/* Trick */
+body{ 
+  display:flex; 
+  flex-direction:column;
+  overflow-x: hidden;
+}
+
+footer{
+  margin-top:auto; 
+}
+
+.navbar-brand{  
+	font-size: 1.5rem !important;
+	color:#ffffff !important;
+}
+
+.navbar-brand b {
+	position: relative;
+}
+
+.navbar-brand b::before{
+	position: absolute;
+	content: 'Track The Trajectory';
+	font-size: 14px;
+	left: 100%;
+	top: 50%;
+	transform: translateY(-50%);
+	font-weight: normal;
+	margin-left: 5px;
+}
+
+.navbar-nav > li >a{
+	position: relative;
+	font-size:0.9rem !important;
+	color:#ffffff !important;
+	font-family: 'Consolas';
+	letter-spacing: 0.5px;
+	/* text-transform: uppercase; */
+	margin: 1px;
+}
+
+.navbar-nav > li >a::before{
+	position: absolute;
+	content: '';
+	width: 88%;
+	height: 2px;
+	background-color: white;
+	bottom: 5px;
+	transform: scaleX(0);
+	opacity: 0.8;
+	transition: transform 300ms ease-out;
+}
+
+.navbar-nav > li >a:hover::before {
+	transform: scaleX(1);
+}
+
+.grad{
+  background-image: linear-gradient(to right, #00c6ff , #0072ff);
+}
+
+.sub-header{
+	text-align:center;
+	padding:10px;
+}
+
+.custom-title{
+	text-align:center;
+	margin:10px;
+	padding:10px;
+	font-size: 1.5rem;
+	/*border-radius: 1em;*/
+	border: solid 1px #cccccc;
+	border-radius: 15px 15px 15px 15px;
+	box-shadow: 5px 5px 5px #cccccc;
+}
+
+.about-title{
+	text-align:center;
+	margin:10px;
+	padding:20px;
+	font-size: 1.5rem;
+	/*border-radius: 1em;*/
+	border: solid 1px #cccccc;
+	border-radius: 15px 15px 15px 15px;
+	box-shadow: 5px 5px 5px #cccccc;
+}
+
+.about-box{
+	text-align:left;
+	font-size: 1rem;
+	margin:30px;
+	padding:5px;
+}
+
+.blue-box{
+	text-align:center;
+	margin:5px;
+	padding:10px;
+	font-size: 1.5rem;
+	/*border-radius: 1em;*/
+	border: solid 3px #0072ff;
+	border-radius: 15px 15px 15px 15px;
+	box-shadow: 5px 5px 5px #cccccc;
+}
+.pointer{
+	cursor: pointer;
+}
+
+.modal-lg {
+	max-width: 90% !important;
+}
+
+.chosen-container{
+	margin-top:8px !important;
+}
+tspan{
+	display:none !important;
+}
+
+.close{background-color: transparent;}
+
+.custom-box{
+	line-height:30px;
+}
+
+.modal-body{
+	position: relative;
+}
+.modal-body::before{
+	position: absolute;
+	content: '* These are cumulative values';
+	bottom: 0px;
+	right: 15px;
+	color: rgb(83, 83, 0);
+}
+
+.images-grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin: 30px 0 0 10px;
+	grid-row-gap: 30px;
+}
+
+.images-grid img{
+	width: 600px;
+	height: 330px;
+}
+
+.full-dataset-btn{
+	font-size: 1em;
+}
+
+.map-loading-screen{
+	position: absolute;
+	width: 100%;
+	height: 80%;
+	background-color: white;
+	z-index: 100;
+}
+
+.map-loading-screen .box{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	border: 2px solid rgb(32, 31, 31);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	animation: spin-loader 1.5s ease-in-out infinite;
+}
+
+.heatscale{
+	position: absolute;
+	width: 40%;
+	height: 15px;
+	background: linear-gradient(to right, #0073ff10, #0073ffff);
+	border: 1px solid #0073fff1;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: -1;
+}
+
+.heatscale::before{
+	position: absolute;
+	content: "0";
+	left: 0%;
+	bottom: 100%;
+}
+
+.heatscale::after{
+	position: absolute;
+	content: "1";
+	right: 0%;
+	bottom: 100%;
+}
+
+.heatscale-desc{
+	position: absolute;
+	bottom: 30px;
+	font-size: 12px;
+	color: rgb(168, 128, 35);
+}
+
+.mentors-thanks{
+	position: relative;
+	font-size: 17px;
+	font-family: Consolas;
+	margin-top: 5em;
+	padding-left: 10px;
+}
+
+@keyframes spin-loader {
+	from{
+		transform: rotate(0deg);
+	}
+	to{ 
+		transform: rotate(360deg);
+	}
+}
